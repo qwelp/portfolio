@@ -1,20 +1,23 @@
 {
-  "dir1": "/",
-  "dir": "/wf1/build/",
+  "dir": "/",
+  "dir1": "/wf1/build/",
   "skills": [
     {
       "title": "Frontend",
       "items": [
         {
           "name": "HTML5",
+          "code": "HTML5",
           "procent": "90"
         },
         {
           "name": "CSS3",
+          "code": "CSS3",
           "procent": "80"
         },
         {
           "name": "JavaScript & jQuery",
+          "code": "Js_Jquery",
           "procent": "75"
         }
       ]
@@ -24,18 +27,22 @@
       "items": [
         {
           "name": "PHP",
+          "code": "PHP",
           "procent": "40"
         },
         {
           "name": "mySQL",
+          "code": "mySQL",
           "procent": "60"
         },
         {
           "name": "Node.js & npm",
+          "code": "Node_npm",
           "procent": "40"
         },
         {
           "name": "Mongo.db",
+          "code": "Mongodb",
           "procent": "65"
         }
       ]
@@ -45,14 +52,17 @@
       "items": [
         {
           "name": "Git",
+          "code": "Git",
           "procent": "80"
         },
         {
           "name": "Gulp",
+          "code": "Gulp",
           "procent": "70"
         },
         {
           "name": "Bower",
+          "code": "Bower",
           "procent": "75"
         }
       ]
@@ -93,19 +103,19 @@
   "menuFooter": [
     {
       "name": "Мои работы",
-      "url": "works.html"
+      "url": "works"
     },
     {
       "name": "Обо мне",
-      "url": "about.html"
+      "url": "about"
     },
     {
       "name": "Блог",
-      "url": "blog.html"
+      "url": "blog"
     },
     {
       "name": "Авторизация",
-      "url": "index.html"
+      "url": ""
     }
   ],
   "blog": [

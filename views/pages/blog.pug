@@ -1,11 +1,5 @@
 extends ../_template
 
-
-block variables
-	- var title = 'Blog'
-	- var blog_footer = 'blog__footer'
-
-
 block content
 	include ../common/preloader
 	section.l-section.l-hero
@@ -41,17 +35,17 @@ block content
 					.wrap-menu__table
 					ul.l-blog-menu__items.menu
 						each item, i in blog
-							li.l-blog-menu__item.menu__item=item.name
+							li.l-blog-menu__item.menu__item=item.title
 		main.l-blog__col.l-blog__col_right
 			.l-blog-list
 				ul.l-blog-list__items
 					each item, i in blog
 						li.l-blog-list__item.news
 							if i == 0
-								.l-blog-list__item-name.active=item.name
+								.l-blog-list__item-name.active=item.title
 								.l-blog-list__item-date=item.date
-								.l-blog-list__item-text!=item.text
+								.l-blog-list__item-text!=item.body
 							else
-								.l-blog-list__item-name=item.name
+								.l-blog-list__item-name=item.title
 								.l-blog-list__item-date=item.date
-								.l-blog-list__item-text!=item.text
+								.l-blog-list__item-text!=item.body

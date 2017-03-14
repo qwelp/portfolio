@@ -5,6 +5,14 @@
 
 	border-radius: 6px;
 	overflow: hidden;
+  position: relative;
+
+  & .status {
+    position: absolute;
+    top: 70px;
+    color: #ffffff;
+    display: block;
+  }
 }
 .c-welcome-form__form {
 	height: 100%;

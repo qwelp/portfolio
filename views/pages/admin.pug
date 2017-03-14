@@ -1,0 +1,116 @@
+extends ../_admin
+
+block content
+	.admin-check
+		.admin-check__msg Сообщение отправлено
+		.admin-form__control
+			input.admin-form__control-btn#js_close__msg(value="Закрыть" type="button")
+	.admin-tabs
+		.admin-tab.active
+			h1.admin__title Страница «Обо мне»
+			form#skills(action="/admin_skills" method="post")
+				.status_skills
+				.admin-skill
+					.admin-skill__sections
+						.admin-skill__wrap
+							h2.admin-skill__title Frontend
+							ul.admin-skill__items
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title HTML5
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="HTML5" value=`${skills[0].HTML5}`)
+										| %
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title CSS3
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="CSS3" value=`${skills[0].CSS3}`)
+										| %
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title JavaScript & jQuery
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="Js_Jquery" value=`${skills[0].Js_Jquery}`)
+										| %
+						.admin-skill__wrap
+							h2.admin-skill__title Backend
+							ul.admin-skill__items
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title PHP
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="PHP" value=`${skills[0].PHP}`)
+										| %
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title mySQL
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="mySQL" value=`${skills[0].mySQL}`)
+										| %
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title Node.js & npm
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="Node_npm" value=`${skills[0].Node_npm}`)
+										| %
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title Mongo.db
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="Mongodb" value=`${skills[0].Mongodb}`)
+										| %
+						.admin-skill__wrap
+							h2.admin-skill__title WorkFlow
+							ul.admin-skill__items
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title Git
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="Git" value=`${skills[0].Git}`)
+										| %
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title Gulp
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="Gulp" value=`${skills[0].Gulp}`)
+										| %
+								li.admin-skill__item
+									.admin-skill__item-row
+										.admin-skill__item-title Bower
+									.admin-skill__item-row
+										input.admin-skill__item-input(type="text" name="Bower" value=`${skills[0].Bower}`)
+										| %
+				.admin-form__control
+					input.admin-form__control-btn(value="Добавить" type="submit")
+		.admin-tab
+			h1.admin__title Страница «Блог»
+			form#blog(method="post" action='/admin_blog')
+				.status_blog
+				.admin-form
+					label.admin-form__row
+						input.admin-form__input(type="text" name="title" placeholder="Название")
+					label.admin-form__row
+						input.admin-form__input(type="text" name="date" placeholder="Дата")
+					label.admin-form__row
+						textarea.admin-form__textarea(name="text" placeholder="Содержание")
+				.admin-form__control
+					input.admin-form__control-btn(value="Добавить" type="submit")
+		.admin-tab
+			h1.admin__title Страница «Мои работы»
+			form#upload(action="" method="post" enctype="multipart/form-data")
+				.admin-form
+					.status_upload
+					label.admin-form__row
+						.admin-form__info Добавить работу
+						input.admin-form__input#file-desc(type="text" name="photo_name" placeholder="Название проекта")
+					label.admin-form__row
+						input.admin-form__input#file-tech(type="text" name="photo_tech" placeholder="Технологии")
+					label.admin-form__row
+						input.admin-form__input#file-url(type="text" name="photo_url" placeholder="Ссылка")
+					.admin-form__row
+						label.admin-form__file
+							.admin-form__file-title Загрузить картинку
+							input.admin-form__file-input#file-select(name="photo" type="file" required accept="image/*")
+				.admin-form__control
+					input.admin-form__control-btn(value="Добавить" type="submit")

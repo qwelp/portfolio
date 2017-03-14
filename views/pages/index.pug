@@ -1,10 +1,5 @@
 extends ../_template_header
 
-
-block variables
-	- var title = 'Welcome'
-
-
 block content
 	include ../common/preloader
 	.waterWebgl
@@ -32,23 +27,24 @@ block content
 													use(xlink:href=`assets/img/sprite.svg#${icon}`)
 							.c-welcome__group.c-welcome__group-btn
 								.c-feedback__group-btnRow
-									a.c-btn-form(href=`${dir}works.html`) Мой работы
+									a.c-btn-form(href=`${dir}works`) Мой работы
 								.c-feedback__group-btnRow
-									a.c-btn-form(href=`${dir}about.html`) Обо мне
+									a.c-btn-form(href=`${dir}about`) Обо мне
 								.c-feedback__group-btnRow.c-feedback__group-link
-									a.c-btn-form(href=`${dir}blog.html`) Блог
+									a.c-btn-form(href=`${dir}blog`) Блог
 						.back
-							form(action="").c-welcome-form__form
+							form#login(action="" method="POST").c-welcome-form__form
 								.c-welcome-form
 									.c-welcome-form__col
 										.c-welcome-form__title Авторизуйтесь
+										.status
 									.c-welcome-form__col
 										.c-welcome-form__col-input
 											.c-welcome-form__col-row
 												svg.c-welcome-form__input-icone
 													use(xlink:href=`assets/img/sprite.svg#login`)
 											.c-welcome-form__col-row
-												input.c-welcome-form__input-text(type="login" name="login" id="login-field" placeholder="Логин")
+												input.c-welcome-form__input-text(type="text" name="login" id="login-field" placeholder="Логин")
 									.c-welcome-form__col
 										.c-welcome-form__col-input
 											.c-welcome-form__col-row
